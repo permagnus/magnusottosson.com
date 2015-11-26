@@ -1,0 +1,73 @@
+$rhythm-unit: 'rem';
+$base-font-size: 16px;
+$base-line-height: 16px;
+$font-default: 'Lato', sans-serif;
+$font-default-weight: 300;
+//$font-headline-1: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$font-headline-1: 'Lora', serif;
+$font-headline-1: 'Playfair Display', serif;
+$font-headline-1-weight: normal;
+$font-headline-1-strong: 'Raleway', sans-serif;
+$font-headline-1-strong-weight: 800;
+$font-headline-2: 'Raleway', sans-serif;
+$font-headline-2-weight: 800;
+$font-headline-3: 'Playfair Display', serif;
+$font-headline-3-weight: normal;
+//$font-headline-1-strong: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$font-headline-1-strong: 'Open Sans Condensed', sans-serif;
+$font-link-decoration: none;
+$font-link-style: normal;
+$font-link-weight: bold;
+$font-link-decoration-active: $font-link-decoration;
+$font-link-style-active: normal;
+$font-link-weight-active: bold;
+$font-link-decoration-hover: $font-link-decoration;
+$font-link-style-hover: normal;
+$font-link-weight-hover: bold;
+$font-link-decoration-visited: $font-link-decoration;
+$font-link-style-visited: normal;
+$font-link-weight-visited: bold;
+
+
+$fontSizes: ( 
+	"default": ( 
+		null: (16px, 1.5), 
+		$breakpoint-phablet: (18px, 1.5), 
+		$breakpoint-small: (24px, 2), 
+		$breakpoint-medium: (24px, 2), 
+		$breakpoint-large: (24px, 2),
+		$breakpoint-full: (24px, 2)
+	),
+	"h1": ( 
+		null: 18px, 
+		$breakpoint-phablet: 24px, 
+		$breakpoint-small: 32px, 
+		$breakpoint-medium: 32px, 
+		$breakpoint-large: 32px, 
+		$breakpoint-full: 32px
+	),
+	"h1-strong": ( 
+		null: 40px, 
+		$breakpoint-phablet: 60px, 
+		$breakpoint-small: 80px, 
+		$breakpoint-medium: 80px, 
+		$breakpoint-large: 80px, 
+		$breakpoint-full: 80px
+	),
+	"h2": ( 
+		null: 25px, 
+		$breakpoint-phablet: 30px, 
+		$breakpoint-small: 40px, 
+		$breakpoint-medium: 50px, 
+		$breakpoint-large: 45px, 
+		$breakpoint-full: 60px
+	),
+	"h3": ( 
+		null: 24px, 
+		$breakpoint-phablet: 24px, 
+		$breakpoint-small: 32px, 
+		$breakpoint-medium: 32px, 
+		$breakpoint-large: 32px, 
+		$breakpoint-full: 32px
+	)
+);

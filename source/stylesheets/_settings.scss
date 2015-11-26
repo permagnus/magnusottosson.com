@@ -1,0 +1,8 @@
+$susy-mid: (columns: 12);
+$susy-max: (columns: 12);
+$breakpoint-phablet: 380px;
+$breakpoint-small: 600px;
+$breakpoint-medium: 750px;
+$breakpoint-large: 1000px;
+$breakpoint-full:1200px;
+$susy: (columns: 12, gutters: 0, container: $breakpoint-full, global-box-sizing: border-box);

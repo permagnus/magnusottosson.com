@@ -1,0 +1,68 @@
+@mixin at-mobile {
+	@include susy-breakpoint(max-width $breakpoint-medium) {
+		@content;
+	}
+}
+
+@mixin at-phablet {
+	@include susy-breakpoint($breakpoint-phablet) {
+		@content;
+	}
+}
+
+@mixin at-small {
+	@include susy-breakpoint($breakpoint-small) {
+		@content;
+	}
+}
+
+@mixin at-medium {
+	@include susy-breakpoint($breakpoint-medium) {
+		@content;
+	}
+}
+
+@mixin at-large {
+	@include susy-breakpoint($breakpoint-large) {
+		@content;
+	}
+}
+
+@mixin at-full {
+	@include susy-breakpoint($breakpoint-full) {
+		@content;
+	}
+}
+
+@mixin font-size-for-size($size) {
+
+	@if type-of($size) == "list" {
+
+		@if (length($size) > 1) {
+			@include adjust-font-size-to(nth($size, 1), nth($size, 2));
+		}
+		@else {
+			@include adjust-font-size-to(nth($size, 1), nth($size, 1)/$base-font-size);
+		}
+	}
+	@else {
+		@include adjust-font-size-to($size, $size/$base-font-size);
+	}
+}
+
+@mixin font-size($key) {
+
+	$sizes: map-get($fontSizes, $key);
+
+	@each $breakpoint, $size in $sizes {
+
+		@if $breakpoint == null {
+	      @include font-size-for-size($size);
+	    }
+	    @else {
+	    	@include susy-breakpoint($breakpoint) {
+				@include font-size-for-size($size);
+			}
+	    }
+	}
+}

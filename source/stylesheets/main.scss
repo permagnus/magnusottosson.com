@@ -1,0 +1,360 @@
+@import "susy";
+@import "font-awesome-compass";
+@import "font-awesome";
+@import "compass/reset";
+@import "compass/typography/vertical_rhythm";
+@import "compass/css3/columns";
+@import "compass/css3/border-radius";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/css3/opacity";
+@import "compass/css3/box-sizing";
+@import "settings";
+@import "colors";
+@import "mixins";
+@import "fonts";
+@include establish-baseline;
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html, body {
+	font-family: $font-default;
+	font-weight: $font-default-weight;
+	color: $color-text-default;
+}
+
+p {
+	//@include adjust-font-size-to($font-default-size, 1.5);
+	@include font-size("default");
+}
+
+a {
+	color: $color-link;
+	text-decoration: $font-link-decoration;
+	font-style: $font-link-style;
+	font-weight: $font-link-weight;
+	border-bottom: 1px solid red
+}
+
+a:active {
+	color: $color-link-active;
+	text-decoration: $font-link-decoration-active;
+	font-style: $font-link-style-active;
+	font-weight: $font-link-weight-active;
+}
+
+a:hover {
+	color: $color-link-hover;
+	text-decoration: $font-link-decoration-hover;
+	font-style: $font-link-style-hover;
+	font-weight: $font-link-weight-hover;
+}
+
+a:visited {
+	color: $color-link-visited;
+	text-decoration: $font-link-decoration-visited;
+	font-style: $font-link-style-visited;
+	font-weight: $font-link-weight-visited;
+}
+
+h1, h2, h3, h4, h5 {}
+
+h1 {
+	@include font-size("h1");
+	text-align: center;
+	font-family: $font-headline-1;
+	font-weight: $font-headline-1-weight;
+	color: $color-text-heading-1;
+	font-style: italic;
+
+	strong {
+		@include font-size("h1-strong");
+		font-family: $font-headline-1-strong;
+		font-weight: $font-headline-1-strong-weight;
+		text-transform: uppercase;
+		display: block;
+		color: $color-text-heading-1-strong;
+		font-style: normal;
+	}
+}
+
+h2 {
+	@include font-size("h2");
+	text-transform: uppercase;
+	text-align: left;
+	font-family: $font-headline-2;
+	font-weight: $font-headline-2-weight;
+}
+
+h3 {
+	@include font-size("h3");
+	text-align: center;
+	font-family: $font-headline-3;
+	font-weight: $font-headline-3-weight;
+}
+
+header {
+	@include container;
+	padding: 20px 0;
+	h1, p {
+		text-align: center;
+		@include span(12 first);
+		@include at-medium {
+			padding: 40px 0;
+			@include span(8 first);
+			@include push(2);
+		}
+		@include at-large {}
+	}
+	h1 {
+		padding: 20px;
+	}
+	p {}
+	a {
+		white-space: nowrap;
+	}
+	@include at-mobile {
+		p {
+			padding: 0 20px;
+		}
+	}
+}
+
+strong {
+	font-weight: bold;
+}
+
+.container {
+	@include container;
+}
+
+#cases {
+	background: #f3f3f3;
+	padding-bottom: 30px;
+	@include at-medium {
+		padding-bottom: 40px;
+	}
+	@include at-large {
+		padding-bottom: 80px;
+	}
+	.case {
+		@include container;
+		padding: 30px 20px 0 20px;
+		@include at-medium {
+			padding: 50px 30px 0 30px;
+		}
+		@include at-large {}
+		@include at-full {
+			padding: 80px 0 0 0;
+		}
+		figure {
+			padding-top: 20px;
+			@include at-large {
+				padding-top: 0;
+			}
+			@include span(12);
+			text-align: center;
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		figcaption {
+			@include span(12);
+			h2 {
+				border-left: 10px solid #fff;
+				padding-left: 20px;
+				padding-right: 10px;
+			}
+		}
+	}
+	#case-where-is-the-bus {
+		figcaption {
+			h2 {
+				border-color: #1cabe8;
+			}
+		}
+		@include at-large {
+			figcaption {
+				@include span(3);
+			}
+			figure {
+				@include span(9);
+			}
+		}
+	}
+	#case-gravidresan {
+		figcaption {
+			h2 {
+				border-color: #ab92e8;
+			}
+		}
+		@include at-large {
+			figcaption {
+				@include span(6);
+			}
+			figure {
+				@include span(6);
+			}
+		}
+	}
+	#case-liberoklubben {
+		figcaption {
+			h2 {
+				border-color: #7662a1;
+			}
+		}
+		@include at-large {
+			figcaption {
+				@include span(4);
+			}
+			figure {
+				@include span(6);
+			}
+		}
+	}
+	#case-kokbokshyllan {
+		figcaption {
+			h2 {
+				border-color: #333;
+			}
+		}
+		@include at-large {
+			figcaption {
+				@include span(4);
+			}
+			figure {
+				@include span(6);
+			}
+		}
+	}
+	#case-cook-and-bake {
+		figcaption {
+			h2 {
+				border-color: #333;
+			}
+		}
+		@include at-large {
+			figcaption {
+				@include span(5);
+			}
+			figure {
+				@include span(6);
+			}
+		}
+	}
+	#case-gravidboken {
+		figcaption {
+			h2 {
+				border-color: #ab92e8;
+			}
+		}
+		@include at-large {
+			figcaption {
+				@include span(5);
+			}
+			figure {
+				@include span(7);
+			}
+		}
+	}
+	#case-ostbagsvalet {
+		figcaption {
+			h2 {
+				border-color: #ab92e8;
+			}
+		}
+		@include at-large {
+			figcaption {
+				@include span(6);
+			}
+			figure {
+				@include span(6);
+			}
+		}
+	}
+	#case-okobooko {
+		figcaption {
+			h2 {
+				border-color: #ace6fb;
+			}
+		}
+		@include at-large {
+			figcaption {
+				@include span(5);
+			}
+			figure {
+				@include span(5);
+			}
+		}
+	}
+	#case-husqvarna-sales-tool {
+		figcaption {
+			h2 {
+				border-color: #273c5f;
+			}
+		}
+		@include at-large {
+			figcaption {
+				@include span(5);
+			}
+			figure {
+				@include span(5);
+			}
+		}
+	}
+}
+
+footer {
+	padding: 40px;
+	background: $color-footer-background;
+	color: $color-footer-text;
+	ul.contact {
+		@include container;
+		text-align: center;
+		li {
+			display: inline;
+		}
+		li + li::before {
+			content: "  /  ";
+			color: red;
+		}
+	}
+	ul.links {
+		@include container;
+		text-align: center;
+		padding: 20px 0;
+		li {
+			display: inline;
+			margin: 0 20px;
+			@include adjust-font-size-to(50px);
+			@include at-medium {
+				@include adjust-font-size-to(50px);
+			}
+			@include at-large {
+				@include adjust-font-size-to(50px);
+			}
+			a, a:active, a:hover, a:visited {
+				color: #fff;
+				font-weight: normal;
+				border: none;
+				opacity: 0.5;
+			}
+			a:hover {
+				opacity: 1;
+			}
+		}
+	}
+	a, a:active, a:hover, a:visited {
+		color: #fff;
+		font-weight: normal;
+	}
+}
