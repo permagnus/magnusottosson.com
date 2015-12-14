@@ -108,7 +108,6 @@ header {
 		text-align: center;
 		@include span(12 first);
 		@include at-medium {
-			padding: 40px 0;
 			@include span(8 first);
 			@include push(2);
 		}
@@ -117,7 +116,9 @@ header {
 	h1 {
 		padding: 20px;
 	}
-	p {}
+	p {
+		padding: 15px 0;
+	}
 	a {
 		white-space: nowrap;
 	}

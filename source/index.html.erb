@@ -1,14 +1,10 @@
----
-title: Magnus Ottosson - Gothenburg based software developer
----
-
 <header>
-	<h1><span>I'm<strong>Magnus<br>Ottosson</strong>- A Senior Software Developer &amp; Creative</h1>
+	<h1><%= I18n.t(:title_headline) %></h1>
 	<p>
-		Currently: Freelance Developer Focused on Mobile Applications.<br>
-		Previously: Founder at NIXON NIXON.<br>
-		Drop me a line at <a href="mailto:<%= data.settings.contact.email %>"><%= data.settings.contact.email %></a>, check my <a href="<%= data.settings.social.linkedin %>">LinkedIn profile</a>, 
-		or download my <a href="downloads/resume-magnus-ottosson.pdf">CV</a>. Below is a selection of my work.
+		<%= I18n.t(:intro) %>
+	</p>
+	<p>
+		<%= I18n.t(:intro2, :email => mail_to(data.settings.contact.email), :linkedin => link_to("linkedin", data.settings.social.linkedin), :cv => link_to("resume", "/resume/MAGNUS-OTTOSSON.pdf")) %>
 	</p>
 </header>
 
@@ -98,18 +94,15 @@ title: Magnus Ottosson - Gothenburg based software developer
 </section>
 
 <footer>
-	<p>
-		For new projects, ideas, business inquiries or quotations, or anything you’d like to discuss, email me at <a href="mailto:<%= data.settings.contact.email %>"><%= data.settings.contact.email %></a>
-	</p>
-	<h3>Connect with me:</h3>
+	<p><%= I18n.t(:footer, :email => mail_to(data.settings.contact.email)) %></p>
+	<h3><%= I18n.t(:footer_connect) %></h3>
 	<ul class="contact">
-		<li><a href="mailto:<%= data.settings.contact.email %>"><%= data.settings.contact.email %></a></li>
-		<li><a href="tel:<%= data.settings.contact.phone %>"><%= data.settings.contact.phone %></a></li>
-		<li><a href="<%= data.settings.contact.web %>"><%= data.settings.contact.web %></a></li>
+		<li><%= mail_to(data.settings.contact.email) %></li>
+		<li><%= link_to(data.settings.contact.phone, "tel:" + data.settings.contact.phone) %></li>
 	</ul>
 	<ul class="links">
-		<li><a href="<%= data.settings.social.linkedin %>"><i class="fa fa-linkedin-square"></i></a></li>
-		<li><a href="<%= data.settings.social.github %>"><i class="fa fa-github"></i></a></li>
-		<li><a href="<%= data.settings.social.twitter %>"><i class="fa fa-twitter"></i></a></li>
+		<li><%= link_to('<i class="fa fa-linkedin-square"></i>', data.settings.social.linkedin) %></li>
+		<li><%= link_to('<i class="fa fa-github-square"></i>', data.settings.social.github) %></li>
+		<li><%= link_to('<i class="fa fa-twitter-square"></i>', data.settings.social.twitter) %></li>
 	</ul>
 </footer>
