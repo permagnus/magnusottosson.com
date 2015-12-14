@@ -7,8 +7,8 @@ title: Magnus Ottosson - Gothenburg based software developer
 	<p>
 		Currently: Freelance Developer Focused on Mobile Applications.<br>
 		Previously: Founder at NIXON NIXON.<br>
-		Drop me a line at <a href="#">magnus@magnusottosson.com</a>, check my <a href="#">LinkedIn profile</a>, 
-		or download my <a href="#">CV</a>. Below is a selection of my work.
+		Drop me a line at <a href="mailto:<%= data.settings.contact.email %>"><%= data.settings.contact.email %></a>, check my <a href="<%= data.settings.social.linkedin %>">LinkedIn profile</a>, 
+		or download my <a href="downloads/resume-magnus-ottosson.pdf">CV</a>. Below is a selection of my work.
 	</p>
 </header>
 
@@ -50,15 +50,6 @@ title: Magnus Ottosson - Gothenburg based software developer
 		</figure>
 	</article>
 
-	<article id="case-liberoklubben" class="case">
-		<figcaption>
-			<h2>Libero-<br>klubben</h2>
-		</figcaption>
-		<figure>
-			<img src="/images/case/liberoklubben.png" alt="Liberoklubben">
-		</figure>
-	</article>
-
 	<article id="case-ostbagsvalet" class="case">
 		<figcaption>
 			<h2>Estrella Ostbågsvalet</h2>
@@ -68,21 +59,30 @@ title: Magnus Ottosson - Gothenburg based software developer
 		</figure>
 	</article>
 
-	<article id="case-cook-and-bake" class="case">
-		<figcaption>
-			<h2>Cook &amp;<br>Bake</h2>
-		</figcaption>
-		<figure>
-			<img src="/images/case/cook-and-bake.png" alt="Cook &amp; Bake">
-		</figure>
-	</article>
-
 	<article id="case-okobooko" class="case">
 		<figcaption>
 			<h2>Okobooko</h2>
 		</figcaption>
 		<figure>
 			<img src="/images/case/okobooko.png" alt="Okobooko">
+		</figure>
+	</article>
+
+	<article id="case-liberoklubben" class="case">
+		<figcaption>
+			<h2>Libero-<br>klubben</h2>
+		</figcaption>
+		<figure>
+			<img src="/images/case/liberoklubben.png" alt="Liberoklubben">
+		</figure>
+	</article>
+
+	<article id="case-cook-and-bake" class="case">
+		<figcaption>
+			<h2>Cook &amp;<br>Bake</h2>
+		</figcaption>
+		<figure>
+			<img src="/images/case/cook-and-bake.png" alt="Cook &amp; Bake">
 		</figure>
 	</article>
 
@@ -98,15 +98,18 @@ title: Magnus Ottosson - Gothenburg based software developer
 </section>
 
 <footer>
+	<p>
+		For new projects, ideas, business inquiries or quotations, or anything you’d like to discuss, email me at <a href="mailto:<%= data.settings.contact.email %>"><%= data.settings.contact.email %></a>
+	</p>
+	<h3>Connect with me:</h3>
 	<ul class="contact">
-		<li>Connect with me: <strong>Magnus Ottosson</strong></li>
-		<li><a href="mailto:magnus@magnusottosson.com">magnus@magnusottosson.com</a></li>
-		<li><a href="tel:+46733908060">+46 733 90 80 60</a></li>
-		<li><a href="http://www.magnusottossob.com/">http://www.magnusottosson.com</a></li>
+		<li><a href="mailto:<%= data.settings.contact.email %>"><%= data.settings.contact.email %></a></li>
+		<li><a href="tel:<%= data.settings.contact.phone %>"><%= data.settings.contact.phone %></a></li>
+		<li><a href="<%= data.settings.contact.web %>"><%= data.settings.contact.web %></a></li>
 	</ul>
 	<ul class="links">
-		<li><a href=""><i class="fa fa-linkedin-square"></i></a></li>
-		<li><a href=""><i class="fa fa-github"></i></a></li>
-		<li><a href=""><i class="fa fa-twitter"></i></a></li>
+		<li><a href="<%= data.settings.social.linkedin %>"><i class="fa fa-linkedin-square"></i></a></li>
+		<li><a href="<%= data.settings.social.github %>"><i class="fa fa-github"></i></a></li>
+		<li><a href="<%= data.settings.social.twitter %>"><i class="fa fa-twitter"></i></a></li>
 	</ul>
 </footer>

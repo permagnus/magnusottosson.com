@@ -13,6 +13,8 @@ $font-headline-2: 'Raleway', sans-serif;
 $font-headline-2-weight: 800;
 $font-headline-3: 'Playfair Display', serif;
 $font-headline-3-weight: normal;
+$font-headline-footer: 'Lato', sans-serif;
+$font-headline-footer-weight: 300;
 //$font-headline-1-strong: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 //$font-headline-1-strong: 'Open Sans Condensed', sans-serif;
 $font-link-decoration: none;
@@ -69,5 +71,21 @@ $fontSizes: (
 		$breakpoint-medium: 32px, 
 		$breakpoint-large: 32px, 
 		$breakpoint-full: 32px
+	),
+	"footer-text": ( 
+		null: 24px, 
+		$breakpoint-phablet: 24px, 
+		$breakpoint-small: 32px, 
+		$breakpoint-medium: 32px, 
+		$breakpoint-large: 32px, 
+		$breakpoint-full: 32px
+	),
+	"footer-list": ( 
+		null: 24px, 
+		$breakpoint-phablet: 18px, 
+		$breakpoint-small: 27px, 
+		$breakpoint-medium: 27px, 
+		$breakpoint-large: 27px, 
+		$breakpoint-full: 27px
 	)
 );

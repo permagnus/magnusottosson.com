@@ -66,3 +66,91 @@
 	    }
 	}
 }
+
+@mixin case($border-color) {
+
+	figcaption {
+		h2 {
+			border: solid $border-color;
+			border-width: 0 0 $case-headline-border-width 0;
+			padding-bottom: 10px;
+		}
+	}
+
+	@include at-large {
+
+		figcaption {
+			h2 {
+				border: none;
+				padding-bottom: 0;
+			}
+		}
+
+		figure {
+
+			img {
+				border: solid $border-color;
+			}
+		}
+	}
+}
+
+@mixin case-text-at-left($img-cols, $text-cols, $border-color) {
+
+	@include case($border-color);
+
+	@include at-large {
+
+		figcaption {
+
+			@include span($text-cols first);
+
+			h2 {
+				text-align: right;
+				margin-right: $case-headline-margin-border-side;
+				padding-left: $case-headline-padding-non-border-side;
+			}
+		}
+
+		figure {
+			@include span($img-cols last);
+			text-align: left;
+
+			img {
+				padding-left: $case-headline-padding-border-side;
+				border-width: 0 0 0 $case-headline-border-width;
+				margin-left: -$case-headline-border-width/2;
+			}
+		}
+	}
+}
+
+@mixin case-text-at-right($img-cols, $text-cols, $border-color) {
+
+	@include case($border-color);
+
+	@include at-large {
+
+		figcaption {
+
+			@include span($text-cols last);
+
+			h2 {
+				text-align: left;
+				margin-left: $case-headline-margin-border-side;
+				padding-right: $case-headline-padding-border-side;
+			}
+		}
+
+		figure {
+			@include span($img-cols first);
+			text-align: right;
+
+			img {
+				padding-right: $case-headline-padding-border-side;
+				border-width: 0 $case-headline-border-width 0 0;
+				margin-right: -$case-headline-border-width/2;
+			}
+		}
+	}
+}
