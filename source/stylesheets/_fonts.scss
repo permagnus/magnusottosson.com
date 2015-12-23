@@ -73,12 +73,12 @@ $fontSizes: (
 		$breakpoint-full: 32px
 	),
 	"footer-text": ( 
-		null: 24px, 
-		$breakpoint-phablet: 24px, 
-		$breakpoint-small: 32px, 
-		$breakpoint-medium: 32px, 
-		$breakpoint-large: 32px, 
-		$breakpoint-full: 32px
+		null: (16px, 1.5), 
+		$breakpoint-phablet: (18px, 1.5), 
+		$breakpoint-small: (24px, 2), 
+		$breakpoint-medium: (24px, 2), 
+		$breakpoint-large: (24px, 2),
+		$breakpoint-full: (24px, 2)
 	),
 	"footer-list": ( 
 		null: 24px, 

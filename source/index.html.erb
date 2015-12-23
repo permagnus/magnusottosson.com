@@ -95,11 +95,6 @@
 
 <footer>
 	<p><%= I18n.t(:footer, :email => mail_to(data.settings.contact.email)) %></p>
-	<h3><%= I18n.t(:footer_connect) %></h3>
-	<ul class="contact">
-		<li><%= mail_to(data.settings.contact.email) %></li>
-		<li><%= link_to(data.settings.contact.phone, "tel:" + data.settings.contact.phone) %></li>
-	</ul>
 	<ul class="links">
 		<li><%= link_to('<i class="fa fa-linkedin-square"></i>', data.settings.social.linkedin) %></li>
 		<li><%= link_to('<i class="fa fa-github-square"></i>', data.settings.social.github) %></li>

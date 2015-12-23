@@ -124,7 +124,7 @@ header {
 	}
 	@include at-mobile {
 		p {
-			padding: 0 20px;
+			padding: 10px 20px;
 		}
 	}
 }
@@ -139,21 +139,27 @@ strong {
 
 #cases {
 	background: #f3f3f3;
-	padding-bottom: 30px;
-	@include at-medium {
-		padding-bottom: 40px;
-	}
-	@include at-large {
-		padding-bottom: 80px;
-	}
+
 	.case {
 		@include container;
-		padding: 30px 20px 0 20px;
+		padding: 30px 20px;
+
+		@include at-medium {
+			padding: 50px 30px;
+		}
+		@include at-full {
+			padding: 40px 0;
+		}
 
 		figure {
 			@include span(12);
 			padding-top: 20px;
 			text-align: center;
+
+			@include at-large {
+				padding-top: 0;
+			}
+
 			img {
 				max-width: 100%;
 				max-height: 100%;
@@ -162,20 +168,8 @@ strong {
 		figcaption {
 			@include span(12);
 		}
-
-		@include at-medium {
-			padding: 50px 30px 0 30px;
-		}
-		@include at-full {
-			padding: 80px 0 0 0;
-		}
-		@include at-large {
-			figure {
-				padding-top: 0;
-			}
-		}
-		
 	}
+
 	#case-where-is-the-bus {
 		@include case-text-at-left(9, 3, #00aded);
 	}
