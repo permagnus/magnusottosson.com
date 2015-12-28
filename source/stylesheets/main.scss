@@ -111,21 +111,18 @@ header {
 			@include span(8 first);
 			@include push(2);
 		}
-		@include at-large {}
 	}
 	h1 {
 		padding: 20px;
 	}
 	p {
-		padding: 15px 0;
+		padding: 10px 10px;
+		@include at-medium {
+			padding: 15px 0;
+		}
 	}
 	a {
 		white-space: nowrap;
-	}
-	@include at-mobile {
-		p {
-			padding: 10px 20px;
-		}
 	}
 }
 
@@ -208,14 +205,14 @@ footer {
 	h3 {
 		font-family: $font-headline-footer;
 		font-weight: $font-headline-footer-weight;
-		padding: 20px 40px;
+		padding: 10px 40px;
 	}
 	
 	p {
 		@include container;
 		@include font-size("footer-text");
 		text-align: center;
-		padding: 40px;
+		padding: 20px 40px;
 	}
 
 	ul {
@@ -237,17 +234,13 @@ footer {
 	ul.links {
 		@include container;
 		text-align: center;
-		padding: 40px;
+		padding: 10px 40px;
 		li {
 			display: inline;
 			margin: 0 20px;
-			@include adjust-font-size-to(50px);
-			@include at-medium {
-				@include adjust-font-size-to(50px);
-			}
-			@include at-large {
-				@include adjust-font-size-to(50px);
-			}
+
+			@include font-size("footer-links");
+
 			a, a:active, a:hover, a:visited {
 				color: #fff;
 				font-weight: normal;

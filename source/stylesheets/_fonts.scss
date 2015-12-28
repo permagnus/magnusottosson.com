@@ -87,5 +87,13 @@ $fontSizes: (
 		$breakpoint-medium: 27px, 
 		$breakpoint-large: 27px, 
 		$breakpoint-full: 27px
+	),
+	"footer-links": ( 
+		null: 50px, 
+		$breakpoint-phablet: 50px, 
+		$breakpoint-small: 50px, 
+		$breakpoint-medium: 50px, 
+		$breakpoint-large: 50px, 
+		$breakpoint-full: 50px
 	)
 );
