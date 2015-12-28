@@ -50,9 +50,10 @@
 	}
 }
 
-@mixin font-size($key) {
+@mixin font-config($key) {
 
-	$sizes: map-get($fontSizes, $key);
+	$config: map-get($font-config, $key);
+	$sizes: map-get($config, "sizes");
 
 	@each $breakpoint, $size in $sizes {
 
@@ -70,7 +71,7 @@
 @mixin case($border-color) {
 
 	border: solid $border-color;
-	border-width: 0 0 0 5px;
+	border-width: 0 0 0 3px;
 
 	@include at-large {
 

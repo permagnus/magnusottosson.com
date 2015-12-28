@@ -1,10 +1,43 @@
-$color-text-default: #333;
-$color-text-heading-1: #333;
-$color-text-heading-1-strong: #333;
-$color-link: #333;
-$color-link-visited: $color-link;
-$color-link-hover: #000;
-$color-link-active: $color-link;
-$color-footer-background: #171717;
-$color-footer-text: #fff;
-$color-footer-link: #fff;
+$color-case-where-is-the-bus: #00aded;
+$color-case-gravidresan: #50538a;
+$color-case-liberoklubben: #625094;
+$color-case-kokbokshyllan: #333;
+$color-case-cook-and-bake: #e8847f;
+$color-case-gravidboken: #ab91da;
+$color-case-ostbagsvalet: #fca72b;
+$color-case-okobooko: #ace6fb;
+$color-case-husqvarna-sales-tool: #77a4b3;
+
+
+html, body {
+	color: #333;
+}
+
+a, a:active, a:hover, a:visited {
+	color: #333;
+}
+
+footer {
+	background: #171717;
+	color: #fff;
+
+	ul.links {
+		li {
+			a, a:active, a:hover, a:visited {
+				color: #fff;
+				opacity: 0.5;
+			}
+			a:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	a, a:active, a:visited {
+		color: #fff;
+	}
+
+	a:hover {
+		color: #474747;
+	}
+}

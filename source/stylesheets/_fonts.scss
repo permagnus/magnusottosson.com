@@ -1,99 +1,217 @@
+
 $rhythm-unit: 'rem';
 $base-font-size: 16px;
 $base-line-height: 16px;
-$font-default: 'Lato', sans-serif;
-$font-default-weight: 300;
-//$font-headline-1: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-//$font-headline-1: 'Lora', serif;
-$font-headline-1: 'Playfair Display', serif;
-$font-headline-1-weight: normal;
-$font-headline-1-strong: 'Raleway', sans-serif;
-$font-headline-1-strong-weight: 800;
-$font-headline-2: 'Raleway', sans-serif;
-$font-headline-2-weight: 800;
-$font-headline-3: 'Playfair Display', serif;
-$font-headline-3-weight: normal;
-$font-headline-footer: 'Lato', sans-serif;
-$font-headline-footer-weight: 300;
-//$font-headline-1-strong: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-//$font-headline-1-strong: 'Open Sans Condensed', sans-serif;
-$font-link-decoration: none;
-$font-link-style: normal;
-$font-link-weight: bold;
-$font-link-decoration-active: $font-link-decoration;
-$font-link-style-active: normal;
-$font-link-weight-active: bold;
-$font-link-decoration-hover: $font-link-decoration;
-$font-link-style-hover: normal;
-$font-link-weight-hover: bold;
-$font-link-decoration-visited: $font-link-decoration;
-$font-link-style-visited: normal;
-$font-link-weight-visited: bold;
 
-
-$fontSizes: ( 
-	"default": ( 
-		null: (16px, 1.5), 
-		$breakpoint-phablet: (18px, 1.5), 
-		$breakpoint-small: (24px, 2), 
-		$breakpoint-medium: (24px, 2), 
-		$breakpoint-large: (24px, 2),
-		$breakpoint-full: (24px, 2)
+$font-config: ( 
+	"default": (
+		"sizes": (
+			null: (16px, 1.5), 
+			$breakpoint-phablet: (18px, 1.5), 
+			$breakpoint-small: (24px, 2), 
+			$breakpoint-medium: (24px, 2), 
+			$breakpoint-large: (24px, 2),
+			$breakpoint-full: (24px, 2)
+		)
 	),
 	"h1": ( 
-		null: 18px, 
-		$breakpoint-phablet: 24px, 
-		$breakpoint-small: 32px, 
-		$breakpoint-medium: 32px, 
-		$breakpoint-large: 32px, 
-		$breakpoint-full: 32px
+		"sizes": (
+			null: 18px, 
+			$breakpoint-phablet: 24px, 
+			$breakpoint-small: 32px, 
+			$breakpoint-medium: 32px, 
+			$breakpoint-large: 32px, 
+			$breakpoint-full: 32px
+		)
 	),
 	"h1-strong": ( 
-		null: 40px, 
-		$breakpoint-phablet: 60px, 
-		$breakpoint-small: 80px, 
-		$breakpoint-medium: 80px, 
-		$breakpoint-large: 80px, 
-		$breakpoint-full: 80px
+		"sizes": (
+			null: 40px, 
+			$breakpoint-phablet: (60px, 3), 
+			$breakpoint-small: (80px, 4), 
+			$breakpoint-medium: (80px, 4), 
+			$breakpoint-large: (80px, 4), 
+			$breakpoint-full: (80px, 4)
+		)
 	),
 	"h2": ( 
-		null: 25px, 
-		$breakpoint-phablet: 30px, 
-		$breakpoint-small: 40px, 
-		$breakpoint-medium: 50px, 
-		$breakpoint-large: 45px, 
-		$breakpoint-full: 60px
+		"sizes": (
+			null: 25px, 
+			$breakpoint-phablet: 30px, 
+			$breakpoint-small: 40px, 
+			$breakpoint-medium: 50px, 
+			$breakpoint-large: 45px, 
+			$breakpoint-full: 60px
+		)
 	),
 	"h3": ( 
-		null: 24px, 
-		$breakpoint-phablet: 24px, 
-		$breakpoint-small: 32px, 
-		$breakpoint-medium: 32px, 
-		$breakpoint-large: 32px, 
-		$breakpoint-full: 32px
+		"sizes": (
+			null: 24px, 
+			$breakpoint-phablet: 24px, 
+			$breakpoint-small: 32px, 
+			$breakpoint-medium: 32px, 
+			$breakpoint-large: 32px, 
+			$breakpoint-full: 32px
+		)
 	),
 	"footer-text": ( 
-		null: (16px, 1.5), 
-		$breakpoint-phablet: (18px, 1.5), 
-		$breakpoint-small: (24px, 2), 
-		$breakpoint-medium: (24px, 2), 
-		$breakpoint-large: (24px, 2),
-		$breakpoint-full: (24px, 2)
+		"sizes": (
+			null: (16px, 1.5), 
+			$breakpoint-phablet: (18px, 1.5), 
+			$breakpoint-small: (24px, 2), 
+			$breakpoint-medium: (24px, 2), 
+			$breakpoint-large: (24px, 2),
+			$breakpoint-full: (24px, 2)
+		)
 	),
 	"footer-list": ( 
-		null: 24px, 
-		$breakpoint-phablet: 18px, 
-		$breakpoint-small: 27px, 
-		$breakpoint-medium: 27px, 
-		$breakpoint-large: 27px, 
-		$breakpoint-full: 27px
+		"sizes": (
+			null: 24px, 
+			$breakpoint-phablet: 18px, 
+			$breakpoint-small: 27px, 
+			$breakpoint-medium: 27px, 
+			$breakpoint-large: 27px, 
+			$breakpoint-full: 27px
+		)
 	),
 	"footer-links": ( 
-		null: 50px, 
-		$breakpoint-phablet: 50px, 
-		$breakpoint-small: 50px, 
-		$breakpoint-medium: 50px, 
-		$breakpoint-large: 50px, 
-		$breakpoint-full: 50px
+		"sizes": (
+			null: 50px, 
+			$breakpoint-phablet: 50px, 
+			$breakpoint-small: 50px, 
+			$breakpoint-medium: 50px, 
+			$breakpoint-large: 50px, 
+			$breakpoint-full: 50px
+		)
 	)
 );
+
+html, body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+p {
+	@include font-config("default");
+}
+
+a, a:active, a:hover, a:visited {
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+}
+
+h1 {
+	@include font-config("h1");
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-weight: normal;
+	font-style: italic;
+
+	strong {
+		@include font-config("h1-strong");
+		font-family: 'Raleway', sans-serif;
+		font-weight: 800;
+		text-transform: uppercase;
+		font-style: normal;
+	}
+}
+
+h2 {
+	@include font-config("h2");
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+h3 {
+	@include font-config("h3");
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-weight: normal;
+}
+
+header {
+	
+	h1, p {
+		text-align: center;
+	}
+
+	a {
+		white-space: nowrap;
+	}
+}
+
+strong {
+	font-weight: bold;
+}
+
+#cases {
+
+	> h2 {
+		@include font-config("h1-strong");
+		font-family: 'Raleway', sans-serif;
+		font-weight: 400;
+		text-transform: uppercase;
+		font-style: normal;
+		text-align: center;
+	}
+
+	figure {
+		text-align: center;
+	}
+}
+
+footer {
+
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+
+	a, a:active, a:hover, a:visited {
+		font-weight: 300;
+	}
+
+	h3 {
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+	}
+
+	@include at-medium {
+		font-weight: 100;
+
+		h3, a, a:active, a:hover, a:visited {
+			font-weight: 100;
+		}
+	}
+	
+	p {
+		@include font-config("footer-text");
+		text-align: center;
+	}
+
+	ul {
+		@include font-config("footer-list");
+	}
+
+	ul.contact {
+		text-align: center;
+	}
+	ul.links {
+
+		text-align: center;
+
+		li {
+			@include font-config("footer-links");
+
+			a, a:active, a:hover, a:visited {
+				color: #fff;
+				font-weight: normal;
+			}
+		}
+	}
+}

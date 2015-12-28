@@ -10,8 +10,8 @@
 @import "compass/css3/opacity";
 @import "compass/css3/box-sizing";
 @import "settings";
-@import "colors";
 @import "mixins";
+@import "colors";
 @import "fonts";
 @include establish-baseline;
 
@@ -25,87 +25,22 @@ html {
 	box-sizing: inherit;
 }
 
-html, body {
-	font-family: $font-default;
-	font-weight: $font-default-weight;
-	color: $color-text-default;
-}
-
-p {
-	//@include adjust-font-size-to($font-default-size, 1.5);
-	@include font-size("default");
-}
-
 a {
-	color: $color-link;
-	text-decoration: $font-link-decoration;
-	font-style: $font-link-style;
-	font-weight: $font-link-weight;
+
 	border-bottom: 1px solid red
 }
 
-a:active {
-	color: $color-link-active;
-	text-decoration: $font-link-decoration-active;
-	font-style: $font-link-style-active;
-	font-weight: $font-link-weight-active;
-}
-
-a:hover {
-	color: $color-link-hover;
-	text-decoration: $font-link-decoration-hover;
-	font-style: $font-link-style-hover;
-	font-weight: $font-link-weight-hover;
-}
-
-a:visited {
-	color: $color-link-visited;
-	text-decoration: $font-link-decoration-visited;
-	font-style: $font-link-style-visited;
-	font-weight: $font-link-weight-visited;
-}
-
-h1, h2, h3, h4, h5 {}
-
 h1 {
-	@include font-size("h1");
-	text-align: center;
-	font-family: $font-headline-1;
-	font-weight: $font-headline-1-weight;
-	color: $color-text-heading-1;
-	font-style: italic;
-
 	strong {
-		@include font-size("h1-strong");
-		font-family: $font-headline-1-strong;
-		font-weight: $font-headline-1-strong-weight;
-		text-transform: uppercase;
 		display: block;
-		color: $color-text-heading-1-strong;
-		font-style: normal;
 	}
-}
-
-h2 {
-	@include font-size("h2");
-	text-transform: uppercase;
-	text-align: left;
-	font-family: $font-headline-2;
-	font-weight: $font-headline-2-weight;
-}
-
-h3 {
-	@include font-size("h3");
-	text-align: center;
-	font-family: $font-headline-3;
-	font-weight: $font-headline-3-weight;
 }
 
 header {
 	@include container;
 	padding: 20px 0;
 	h1, p {
-		text-align: center;
+
 		@include span(12 first);
 		@include at-medium {
 			@include span(8 first);
@@ -121,13 +56,6 @@ header {
 			padding: 15px 0;
 		}
 	}
-	a {
-		white-space: nowrap;
-	}
-}
-
-strong {
-	font-weight: bold;
 }
 
 .container {
@@ -135,7 +63,10 @@ strong {
 }
 
 #cases {
-	background: #f3f3f3;
+
+	> h2 {
+		padding: 30px 20px 10px;
+	}
 
 	.case {
 		@include container;
@@ -151,7 +82,6 @@ strong {
 		figure {
 			@include span(12);
 			padding-top: 20px;
-			text-align: center;
 
 			@include at-large {
 				padding-top: 0;
@@ -168,97 +98,69 @@ strong {
 	}
 
 	#case-where-is-the-bus {
-		@include case-text-at-left(9, 3, #00aded);
+		@include case-text-at-left(9, 3, $color-case-where-is-the-bus);
 	}
 	#case-gravidresan {
-		@include case-text-at-right(6, 6, #50538a);
+		@include case-text-at-right(6, 6, $color-case-gravidresan);
 	}
 	#case-liberoklubben {
-		@include case-text-at-left(6, 6, #625094);
+		@include case-text-at-left(6, 6, $color-case-liberoklubben);
 	}
 	#case-kokbokshyllan {
-		@include case-text-at-left(7, 5, #333);
+		@include case-text-at-left(7, 5, $color-case-kokbokshyllan);
 	}
 	#case-cook-and-bake {
-		@include case-text-at-right(6, 6, #e8847f);
+		@include case-text-at-right(6, 6, $color-case-cook-and-bake);
 	}
 	#case-gravidboken {
-		@include case-text-at-right(7, 5, #ab91da);
+		@include case-text-at-right(7, 5, $color-case-gravidboken);
 	}
 	#case-ostbagsvalet {
-		@include case-text-at-left(6, 6, #fca72b);
+		@include case-text-at-left(6, 6, $color-case-ostbagsvalet);
 	}
 	#case-okobooko {
-		@include case-text-at-right(6, 6, #ace6fb);
+		@include case-text-at-right(6, 6, $color-case-okobooko);
 	}
 	#case-husqvarna-sales-tool {
-		@include case-text-at-left(6, 6, #77a4b3);
+		@include case-text-at-left(6, 6, $color-case-husqvarna-sales-tool);
 	}
 }
 
 footer {
-	background: $color-footer-background;
-	color: $color-footer-text;
-	font-family: $font-headline-footer;
-	font-weight: $font-headline-footer-weight;
 
 	h3 {
-		font-family: $font-headline-footer;
-		font-weight: $font-headline-footer-weight;
 		padding: 10px 40px;
 	}
 	
 	p {
 		@include container;
-		@include font-size("footer-text");
-		text-align: center;
 		padding: 20px 40px;
-	}
-
-	ul {
-		@include font-size("footer-list");
 	}
 
 	ul.contact {
 		@include container;
-		text-align: center;
 
 		li {
 			display: inline;
 		}
 		li + li::before {
 			content: "  ·  ";
-			color: red;
 		}
 	}
 	ul.links {
 		@include container;
-		text-align: center;
 		padding: 10px 40px;
 		li {
 			display: inline;
 			margin: 0 20px;
 
-			@include font-size("footer-links");
-
 			a, a:active, a:hover, a:visited {
-				color: #fff;
-				font-weight: normal;
 				border: none;
-				opacity: 0.5;
-			}
-			a:hover {
-				opacity: 1;
 			}
 		}
 	}
 	a, a:active, a:hover, a:visited {
-		color: #fff;
-		font-weight: 300;
-		border-bottom: none;
-	}
 
-	a:hover {
-		color: #474747;
+		border-bottom: none;
 	}
 }
