@@ -115,6 +115,12 @@ header {
 	#case-gravidboken {
 		@include case-text-at-right(7, 5, $color-case-gravidboken);
 	}
+	#case-magnusottosson_com {
+		@include case-text-at-left(6, 6, $color-case-magnusottosson_com);
+	}
+	#case-trygg-hansa-upptack-havet {
+		@include case-text-at-right(6, 6, $color-case-trygg-hansa-upptack-havet);
+	}
 	#case-ostbagsvalet {
 		@include case-text-at-left(6, 6, $color-case-ostbagsvalet);
 	}
