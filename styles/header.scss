@@ -1,0 +1,5 @@
+@import "../node_modules/rfs/scss";
+
+.default {
+  @include padding-top(3rem);
+}

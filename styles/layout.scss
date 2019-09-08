@@ -1,0 +1,16 @@
+@import "../node_modules/rfs/scss";
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.spacing {
+  @include padding(16px);
+}
+
+.center {
+  text-align: center;
+}

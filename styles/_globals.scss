@@ -1,0 +1,17 @@
+@import "~normalize.css";
+
+$breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$spacing: 8px;
+
+html,
+body {
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+*, h1 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,21 @@
+@import "../node_modules/rfs/scss";
+
+.default {
+  @include font-size(2rem);
+  color: #333;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.name {
+  @include font-size(5.5rem);
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 0.8em;
+  text-transform: uppercase;
+}
