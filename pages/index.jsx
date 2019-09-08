@@ -32,6 +32,12 @@ const Index = () => {
                 <meta name="msapplication-TileColor" content="#da532c"/>
                 <meta name="msapplication-config" content="/static/favicons/browserconfig.xml"/>
                 <meta name="theme-color" content="#ffffff"/>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72173513-1" />
+                <script dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'UA-72173513-1');`}} />
             </Head>
             <header className={cx(layout.container, layout.spacing, header.default)}>
                 <h1 className={logo.default}>
