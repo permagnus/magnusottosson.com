@@ -1,0 +1,9 @@
+/* WHO AM I */
+
+Name: Magnus Ottosson
+Title: Technical Director | Team Lead | Sr Developer & Advisor | Creative | Angel Investor
+Contact: magnus@magnusottosson.com
+Github: https://github.com/magnusottosson
+Linkedin: https://www.linkedin.com/in/magnusottosson/
+Twitter: @permagnus
+From: Gothenburg, Sweden

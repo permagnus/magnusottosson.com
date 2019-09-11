@@ -14,12 +14,13 @@ const Index = () => {
     return (
         <>
             <Head>
+                <meta charSet="utf-8"/>
                 <title>Magnus Ottosson - Technical Director | Team Lead | Sr Developer & Advisor | Creative | Angel
                     Investor</title>
                 <meta name="Description" content="I have dedicated my entire professional and personal life developing myself into not only to become the
                 best possible software developer I can be, but also being one step ahead of the curve at all times."/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <meta charSet="utf-8"/>
+                <link type="text/plain" rel="author" href="/humans.txt" />
                 <link
                     href="https://fonts.googleapis.com/css?family=Lato:300,700|Playfair+Display:400i|Raleway:800&display=swap"
                     rel="stylesheet"/>

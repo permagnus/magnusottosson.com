@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+https://magnusottosson.se/* https://www.magnusottosson.com/:splat 301!
+https://www.magnusottosson.se/* https://www.magnusottosson.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://relaxed-montalcini-27fefc.netlify.com/* https://www.magnusottosson.com/:splat 301!
